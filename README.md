@@ -21,7 +21,7 @@ Counter strings generator written in [rust](https://www.rust-lang.org/) to help 
 
 Make sure you have [rust](https://www.rust-lang.org/) installed on your machine by following the [getting started guide](https://www.rust-lang.org/learn/get-started)
 
-## Instructions
+### Instructions
 
 * Clone this repository `git clone git@github.com:thomaschaplin/rust-counter-strings.git`
 * Change directory `cd rust-counter-strings`
