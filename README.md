@@ -22,7 +22,7 @@ Make sure you have [rust](https://www.rust-lang.org/) installed on your machine 
 
 #### Example output:
 
-./rust-counter-strings 50
+`./rust-counter-strings 50`
 
 ```
 2*4*6*8*11*14*17*20*23*26*29*32*35*38*41*44*47*50*
