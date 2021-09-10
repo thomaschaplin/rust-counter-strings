@@ -16,9 +16,7 @@ fn main() {
     while count > 0 {
         let mut result = String::from("*");
 
-        let count_as_string = count.to_string();
-
-        result.push_str(&count_as_string.chars().rev().collect::<String>());
+        result.push_str(&count.to_string().chars().rev().collect::<String>());
 
         if result.len() > count {
             result = result[..count as usize].to_string();
