@@ -26,7 +26,7 @@ fn main() {
 
         counter_string.push_str(&build_string);
 
-        count = count - build_string.len();
+        count -= build_string.len();
     }
 
     println!("{}", counter_string.chars().rev().collect::<String>())
