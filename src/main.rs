@@ -14,19 +14,19 @@ fn main() {
     };
 
     while count > 0 {
-        let mut build_string = String::from("*");
+        let mut result = String::from("*");
 
         let count_as_string = count.to_string();
 
-        build_string.push_str(&count_as_string.chars().rev().collect::<String>());
+        result.push_str(&count_as_string.chars().rev().collect::<String>());
 
-        if build_string.len() > count {
-            build_string = build_string[..count as usize].to_string();
+        if result.len() > count {
+            result = result[..count as usize].to_string();
         }
 
-        counter_string.push_str(&build_string);
+        counter_string.push_str(&result);
 
-        count -= build_string.len();
+        count -= result.len();
     }
 
     println!("{}", counter_string.chars().rev().collect::<String>())
