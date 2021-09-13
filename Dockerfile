@@ -7,6 +7,7 @@ WORKDIR /rust-counter-strings
 COPY ./Cargo.lock ./Cargo.lock
 COPY ./Cargo.toml ./Cargo.toml
 COPY ./src ./src
+COPY ./benches ./benches
 
 RUN cargo build --release
 
