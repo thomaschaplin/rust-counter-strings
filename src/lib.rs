@@ -30,7 +30,7 @@ pub fn get_count() -> usize {
             args[1].trim()
         ),
     };
-    return count;
+    count
 }
 
 #[cfg(test)]
