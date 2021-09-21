@@ -10,7 +10,7 @@ Counter strings generator written in [rust](https://www.rust-lang.org/) to help 
 
 ## How do I use a counterstring?
 
-> "Each asterisk in the string occurs at a position specified by the immediately preceding number. Thus, the asterisk following the 29 is the 29th character in that string. So, you can chop the end of the string anywhere, and you know exactly where it was cut. Without having to count, you know that the string `2*4*6*8*11*14*17*2` has exactly 18 characters in it. This saves some effort when you’re dealing with a half million characters. I pasted a 4000 character counterstring into the address field and it was truncated at `2045*20`, meaning that 2047 characters were pasted." - [James Bach](https://www.satisfice.com/blog/archives/22)
+> "Each asterisk in the string occurs at a position specified by the immediately preceding number. Thus, the asterisk following the 29 is the 29th character in that string. So, you can chop the end of the string anywhere, and you know exactly where it was cut. Without having to count, you know that the string `2*4*6*8*11*14*17*20` has exactly 18 characters in it. This saves some effort when you’re dealing with a half million characters. I pasted a 4000 character counterstring into the address field and it was truncated at `2045*20`, meaning that 2047 characters were pasted." - [James Bach](https://www.satisfice.com/blog/archives/22)
 
 ## Docker Usage
 
