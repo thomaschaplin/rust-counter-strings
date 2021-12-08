@@ -15,7 +15,7 @@ Counter strings generator written in [rust](https://www.rust-lang.org/) to help 
 ## Docker Usage
 
 - `docker pull thomaschaplin/rust-counter-strings`
-- `docker run --rm -it thomaschaplin/rust-counter-strings <NUMBER>`
+- `docker run --rm thomaschaplin/rust-counter-strings <NUMBER>`
 
 ## Development Setup
 
@@ -50,7 +50,7 @@ docker build --rm -f Dockerfile -t thomaschaplin/rust-counter-strings .
 
 Run
 ```
-docker run --rm -it thomaschaplin/rust-counter-strings <NUMBER>
+docker run --rm thomaschaplin/rust-counter-strings <NUMBER>
 ```
 
 ---
