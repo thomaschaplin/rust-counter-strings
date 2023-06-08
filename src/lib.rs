@@ -10,7 +10,7 @@ pub fn generate(mut count: usize) -> String {
         result.push_str(&count.to_string().graphemes(true).rev().collect::<String>());
 
         if result.len() > count {
-            result = result[..count as usize].to_string();
+            result = result[..count].to_string();
         }
 
         counter_string.push_str(&result);
