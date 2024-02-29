@@ -4,11 +4,10 @@
 FROM rust:latest AS builder
 
 RUN rustup target add x86_64-unknown-linux-musl
-RUN apt update && apt install -y musl-tools musl-dev
-RUN update-ca-certificates
+RUN apt update && apt install -y musl-tools musl-dev binutils
 
 # Create appuser
-ENV USER=rust-counter-strings
+ENV USER=rust
 ENV UID=10001
 
 RUN adduser \
@@ -20,12 +19,17 @@ RUN adduser \
     --uid "${UID}" \
     "${USER}"
 
-
 WORKDIR /rust-counter-strings
 
 COPY ./ .
 
 RUN cargo build --target x86_64-unknown-linux-musl --release
+
+RUN strip target/x86_64-unknown-linux-musl/release/rust-counter-strings
+
+# Download upx binary
+ADD https://github.com/upx/upx/releases/download/v4.2.2/upx-4.2.2-amd64_linux.tar.xz /tmp/upx.tar.xz
+RUN tar -xvf /tmp/upx.tar.xz -C /tmp && cp /tmp/upx-4.2.2-amd64_linux/upx /usr/local/bin/upx
 
 ####################################################################################################
 ## Final Image
@@ -42,6 +46,6 @@ WORKDIR /rust-counter-strings
 COPY --from=builder /rust-counter-strings/target/x86_64-unknown-linux-musl/release/rust-counter-strings ./
 
 # Use an unprivileged user.
-USER rust-counter-strings:rust-counter-strings
+USER rust:rust
 
 ENTRYPOINT ["./rust-counter-strings"]
