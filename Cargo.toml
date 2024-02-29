@@ -15,7 +15,7 @@ Generate self-describing strings of a given length to help aid software testing
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
-unicode-segmentation = "1.10.1"
+unicode-segmentation = "1.11.0"
 
 [features]
 grapheme = []
